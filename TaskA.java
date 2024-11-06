@@ -40,7 +40,7 @@ public class MyList {
             if(array[i]==v)
             {
                 deleteByIndex(i);
-                break;
+                i--;
             }
         }
     }
