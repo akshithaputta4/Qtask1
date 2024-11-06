@@ -37,7 +37,7 @@ public class MyList {
     {
         for(int i=0;i<size;i++)
         {
-            if(array[i]==v)
+            if(array[i].equals(v))
             {
                 deleteByIndex(i);
                 break;
