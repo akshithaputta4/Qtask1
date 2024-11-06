@@ -1,7 +1,23 @@
 import java.util.*;
-public class GenericMyList<T> {
-    static Object[] array;
-    static int size;
+public class CustomList
+{
+    int i;
+    String s;
+    public CustomList(int i,String s)
+    {
+        this.i=i;
+        this.s=s;
+    }
+    @Override
+    public String toString()
+    {
+        String o="number"+i+"name"+s;
+        return o;
+    }
+}
+class GenericMyList<T> {
+    Object[] array;
+    int size;
     public GenericMyList()
     {
         array=new Object[100];
@@ -60,6 +76,8 @@ public class GenericMyList<T> {
     }
     public static void main(String[] args)  {
         GenericMyList<String> m=new GenericMyList<>();
+        GenericMyList<CustomList> c=new GenericMyList<>();
+        GenericMyList<Integer> p=new GenericMyList<>();
         try{
         m.add("aks");
         m.add("as");
@@ -69,6 +87,12 @@ public class GenericMyList<T> {
         m.add("as");
         m.getElement(1);
         m.print();
+        CustomList t=new CustomList(1, "aks");
+        c.add(t);
+        c.print();
+        p.add(1);
+        p.add(2);
+        p.print();
         }
         catch(Exception e)
         {
