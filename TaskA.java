@@ -1,8 +1,8 @@
 import java.util.Arrays;
 
 public class MyList {
-    static int[] array;
-    static int size;
+    int[] array;
+    int size;
     public MyList()
     {
         array=new int[100];
