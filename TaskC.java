@@ -58,7 +58,7 @@ class GenericMyList<T> {
             if(array[i].equals(v))
             {
                 deleteByIndex(i);
-                break;
+                i--;
             }
         }
     }
